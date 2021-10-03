@@ -170,6 +170,7 @@ impl fmt::Display for RTCIceCandidate {
 
 /// ICECandidateInit is used to serialize ice candidates
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct RTCIceCandidateInit {
     pub candidate: String,
     pub sdp_mid: String,
